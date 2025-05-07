@@ -1,3 +1,7 @@
+import 'package:devus/features/auth/presentation/screens/sign_in_screen.dart';
+import 'package:devus/router/router.dart';
+import 'package:devus/theme/app_theme.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class MainApp extends StatelessWidget {
@@ -5,6 +9,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Devus', theme: ThemeData(), home: MainApp());
+    return MaterialApp.router(
+      title: 'Devus',
+      theme: customLightTheme,
+      routerConfig: router,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+    );
   }
 }

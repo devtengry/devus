@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "666141446956",
+    "project_id": "devus-auth",
+    "storage_bucket": "devus-auth.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666141446956:android:73325a1095304a5a905289",
+        "android_client_info": {
+          "package_name": "com.example.devus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKjyFXsbHyDWagipHnveJSK2DM28pJu4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
