@@ -57,8 +57,6 @@ class SignInScreen extends StatelessWidget {
                   child: SingleChildScrollView(
                     child: CustomColumn(
                       customColumnChildrens: [
-                        CustomTextWidget(customText: 'name'.tr()),
-                        CustomTextField(validator: nameValidator),
                         CustomTextWidget(customText: 'email'.tr()),
                         CustomTextField(validator: emailValidator),
                         CustomTextWidget(customText: 'password'.tr()),
