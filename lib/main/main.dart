@@ -16,6 +16,7 @@ void main() async {
 
   runApp(
     ScreenUtilInit(
+      designSize: Size(375, 812),
       child: EasyLocalization(
         path: 'assets/l10n',
         supportedLocales: [Locale('en', 'US')],

@@ -1,9 +1,12 @@
+import 'package:devus/common/hooks/validator_hooks.dart';
 import 'package:devus/common/widgets/custom_column.dart';
 import 'package:devus/common/widgets/custom_elevated_button.dart';
+import 'package:devus/common/widgets/custom_text_button.dart';
 import 'package:devus/common/widgets/custom_text_filed.dart';
 import 'package:devus/common/widgets/custom_text_widget.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -11,8 +14,7 @@ class SignInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height;
-
+    final screenHeight = 1.sh;
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -21,12 +23,24 @@ class SignInScreen extends StatelessWidget {
               top: 0,
               left: 0,
               right: 0,
-              height: screenHeight * 1,
-              child: Container(color: const Color.fromARGB(255, 216, 220, 221)),
+              height: screenHeight * 0.5.h,
+              child: CustomColumn(
+                customCrossAxisAlignment: CrossAxisAlignment.center,
+                customColumnChildrens: [
+                  Text(
+                    'create_account'.tr(),
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 20.sp,
+                    ),
+                  ),
+                ],
+              ),
             ),
 
             Positioned(
-              top: screenHeight * 0.5,
+              top: screenHeight * 0.4.h,
               left: 0,
               right: 0,
               bottom: 0,
@@ -39,16 +53,28 @@ class SignInScreen extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(30.0),
                   child: SingleChildScrollView(
                     child: CustomColumn(
                       customColumnChildrens: [
                         CustomTextWidget(customText: 'name'.tr()),
-                        CustomTextField(),
+                        CustomTextField(validator: nameValidator),
                         CustomTextWidget(customText: 'email'.tr()),
-                        CustomTextField(),
+                        CustomTextField(validator: emailValidator),
                         CustomTextWidget(customText: 'password'.tr()),
-                        CustomTextField(),
+                        CustomTextField(
+                          isPassword: true,
+                          validator: passwordValidator,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            CustomTextButton(
+                              customTextButtonText: 'login',
+                              onPressed: () => context.go('/'),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),

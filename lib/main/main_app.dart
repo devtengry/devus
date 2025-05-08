@@ -1,4 +1,3 @@
-import 'package:devus/features/auth/presentation/screens/sign_in_screen.dart';
 import 'package:devus/router/router.dart';
 import 'package:devus/theme/app_theme.dart';
 import 'package:easy_localization/easy_localization.dart';

@@ -3,5 +3,16 @@
     "password": "Password",
     "login": "Login",
     "name": "Name",
-    "sign_in": "Sign In"
+    "sign_in": "Sign In",
+    "create_account": "Create an Account",
+    "welcome_login": "Welcome to DevUs",
+    "forgot_password": "Forgot Password",
+
+    "email_required": "Email is required",
+    "email_invalid": "Invalid email address",
+    "password_required": "Password is required",
+    "password_short": "Password must be at least 6 characters",
+    "name_required": "Name is required",
+    "name_short": "Name must be at least 2 characters"
+
   }
