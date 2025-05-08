@@ -10,16 +10,17 @@ class CustomTextField extends HookWidget {
     this.keyboardType,
     this.validator,
     this.isPassword = false,
+    this.controller,
   });
 
   final String? hintText;
   final TextInputType? keyboardType;
   final ValidatorFunction? validator;
   final bool isPassword;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
-    final controller = useTextEditingController();
     final isObscured = useState(isPassword);
 
     return TextFormField(
