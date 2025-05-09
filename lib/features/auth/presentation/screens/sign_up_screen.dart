@@ -1,3 +1,4 @@
+import 'package:devus/common/sizes.dart';
 import 'package:devus/common/widgets/column_custom.dart';
 import 'package:devus/common/widgets/elevated_button_custom.dart';
 import 'package:devus/common/widgets/text_widget_custom.dart';
@@ -19,15 +20,21 @@ class SignUpScreen extends StatelessWidget {
     final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 255, 217, 91),
       body: SafeArea(
         child: Column(
           children: [
             Expanded(
               flex: 2,
               child: ColumnCustom(
-                customCrossAxisAlignment: CrossAxisAlignment.center,
                 customColumnChildrens: [
-                  TextWidgetCustom(customText: 'create_account'),
+                  TextWidgetCustom(
+                    customText: 'create_account',
+                    customFontSize:
+                        Theme.of(
+                          context,
+                        ).textTheme.titleLarge?.fontSize?.toInt(),
+                  ),
                 ],
               ),
             ),
@@ -36,7 +43,7 @@ class SignUpScreen extends StatelessWidget {
               flex: 0,
               child: AuthContainerCustom(
                 containerChild: Padding(
-                  padding: const EdgeInsets.all(30.0),
+                  padding: EdgeInsets.all(ScreenSize.kPaddingLarge),
                   child: SingleChildScrollView(
                     child: SignInForm(
                       formKey: formKey,

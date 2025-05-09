@@ -1,3 +1,4 @@
+import 'package:devus/common/sizes.dart';
 import 'package:devus/common/widgets/column_custom.dart';
 import 'package:devus/common/widgets/elevated_button_custom.dart';
 import 'package:devus/common/widgets/text_widget_custom.dart';
@@ -19,6 +20,8 @@ class LoginScreen extends StatelessWidget {
     final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 255, 217, 91),
+
       body: SafeArea(
         child: Column(
           children: [
@@ -26,7 +29,13 @@ class LoginScreen extends StatelessWidget {
               flex: 1,
               child: ColumnCustom(
                 customColumnChildrens: [
-                  TextWidgetCustom(customText: 'welcome_login'),
+                  TextWidgetCustom(
+                    customText: 'welcome_login',
+                    customFontSize:
+                        Theme.of(
+                          context,
+                        ).textTheme.titleLarge?.fontSize?.toInt(),
+                  ),
                 ],
               ),
             ),
@@ -35,7 +44,7 @@ class LoginScreen extends StatelessWidget {
               flex: 0,
               child: AuthContainerCustom(
                 containerChild: Padding(
-                  padding: const EdgeInsets.all(30.0),
+                  padding: EdgeInsets.all(ScreenSize.kPaddingLarge),
                   child: SingleChildScrollView(
                     child: LoginForm(
                       formKey: formKey,

@@ -1,3 +1,4 @@
+import 'package:devus/common/sizes.dart';
 import 'package:flutter/material.dart';
 
 class AuthContainerCustom extends StatelessWidget {
@@ -18,8 +19,12 @@ class AuthContainerCustom extends StatelessWidget {
       decoration: BoxDecoration(
         color: containerColor ?? Colors.white,
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular((containerBorderRadius ?? 20)),
-          topRight: Radius.circular((containerBorderRadius ?? 20)),
+          topLeft: Radius.circular(
+            (containerBorderRadius ?? ScreenSize.kRadiusLarge),
+          ),
+          topRight: Radius.circular(
+            (containerBorderRadius ?? ScreenSize.kRadiusLarge),
+          ),
         ),
       ),
       child: containerChild,

@@ -1,3 +1,4 @@
+import 'package:devus/common/sizes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,7 +17,7 @@ class TextWidgetCustom extends StatelessWidget {
       customText.tr(),
       style: TextStyle(
         fontFamily: 'Inter',
-        fontSize: (customFontSize ?? 12).sp,
+        fontSize: (customFontSize ?? ScreenSize.kFontSmall).sp,
         fontWeight: FontWeight.w600,
       ),
     );
