@@ -9,8 +9,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +25,11 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              flex: 1,
+              flex: 2,
               child: ColumnCustom(
+                customCrossAxisAlignment: CrossAxisAlignment.center,
                 customColumnChildrens: [
-                  TextWidgetCustom(customText: 'welcome_login'),
+                  TextWidgetCustom(customText: 'create_account'),
                 ],
               ),
             ),
@@ -62,16 +63,11 @@ class LoginScreen extends StatelessWidget {
                             controller: _passwordController,
                           ),
                           Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               TextButtonCustom(
-                                customTextButtonText: 'forgot_password',
-                                onPressed: () => context.go(''),
-                              ),
-                              TextButtonCustom(
-                                customTextButtonText: 'sign_up',
-                                onPressed: () => context.go('/sign_up_screen'),
+                                customTextButtonText: 'login',
+                                onPressed: () => context.go('/'),
                               ),
                             ],
                           ),
@@ -89,10 +85,10 @@ class LoginScreen extends StatelessWidget {
         color: Colors.white,
         child: ElevatedButtonCustom(
           customButtonBackround: Colors.blueGrey,
-          customButtonText: 'login'.tr(),
+          customButtonText: 'sign_up'.tr(),
           onPressed: () async {
             if (formKey.currentState!.validate()) {
-              await FirebaseAuthentication().signInWithEmailAndPassword(
+              await FirebaseAuthentication().createUserWithEmailAndPassword(
                 context: context,
                 email: _emailController.text,
                 password: _passwordController.text,

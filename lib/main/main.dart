@@ -7,11 +7,9 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
-  await dotenv.load(fileName: ".env");
-
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await EasyLocalization.ensureInitialized();
 
   runApp(

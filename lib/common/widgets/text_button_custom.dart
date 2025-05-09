@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-class CustomTextButton extends StatelessWidget {
-  const CustomTextButton({
+class TextButtonCustom extends StatelessWidget {
+  const TextButtonCustom({
     super.key,
     required this.onPressed,
     required this.customTextButtonText,

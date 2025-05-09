@@ -3,8 +3,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 
 typedef ValidatorFunction = String? Function(String? value);
 
-class CustomTextField extends HookWidget {
-  const CustomTextField({
+class TextFieldCustom extends HookWidget {
+  const TextFieldCustom({
     super.key,
     this.hintText,
     this.keyboardType,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomColumn extends StatelessWidget {
-  const CustomColumn({
+class ColumnCustom extends StatelessWidget {
+  const ColumnCustom({
     super.key,
     this.customMainAxisAlignment,
     this.customCrossAxisAlignment,
