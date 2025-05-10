@@ -1,4 +1,4 @@
-import 'package:devus/common/sizes.dart';
+import 'package:devus/common/constants/sizes.dart';
 import 'package:devus/common/widgets/column_custom.dart';
 import 'package:devus/common/widgets/elevated_button_custom.dart';
 import 'package:devus/common/widgets/text_widget_custom.dart';

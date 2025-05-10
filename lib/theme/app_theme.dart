@@ -1,4 +1,4 @@
-import 'package:devus/common/sizes.dart';
+import 'package:devus/common/constants/sizes.dart';
 import 'package:devus/theme/color_palette.dart';
 import 'package:flutter/material.dart';
 
