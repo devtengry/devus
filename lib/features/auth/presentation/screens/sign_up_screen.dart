@@ -64,8 +64,7 @@ class SignUpScreen extends StatelessWidget {
           customButtonText: 'sign_up'.tr(),
           onPressed: () async {
             if (formKey.currentState!.validate()) {
-              await FirebaseAuthentication().createUserWithEmailAndPassword(
-                context: context,
+              await FirebaseAuthentication().firebaseSignUp(
                 email: _emailController.text,
                 password: _passwordController.text,
               );

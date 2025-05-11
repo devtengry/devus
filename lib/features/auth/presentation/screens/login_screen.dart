@@ -65,8 +65,7 @@ class LoginScreen extends StatelessWidget {
           customButtonText: 'login'.tr(),
           onPressed: () async {
             if (formKey.currentState!.validate()) {
-              await FirebaseAuthentication().signInWithEmailAndPassword(
-                context: context,
+              await FirebaseAuthentication().firebaseLogin(
                 email: _emailController.text,
                 password: _passwordController.text,
               );
