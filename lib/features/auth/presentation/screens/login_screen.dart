@@ -20,7 +20,7 @@ class LoginScreen extends StatelessWidget {
     final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 255, 217, 91),
+      backgroundColor: const Color.fromARGB(255, 240, 240, 240),
 
       body: SafeArea(
         child: Column(

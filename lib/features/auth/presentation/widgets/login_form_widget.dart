@@ -43,7 +43,7 @@ class LoginForm extends StatelessWidget {
             children: [
               TextButtonCustom(
                 customTextButtonText: 'forgot_password',
-                onPressed: () => context.go(''),
+                onPressed: () => context.go('/reset'),
               ),
               TextButtonCustom(
                 customTextButtonText: 'sign_up',

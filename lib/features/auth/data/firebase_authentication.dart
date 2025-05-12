@@ -14,7 +14,7 @@ class FirebaseAuthentication {
         email: email,
         password: password,
       );
-    } catch (e) {
+    } on FirebaseAuthException catch (e) {
       print(e);
     }
   }
@@ -28,7 +28,15 @@ class FirebaseAuthentication {
         email: email,
         password: password,
       );
-    } catch (e) {
+    } on FirebaseAuthException catch (e) {
+      print(e);
+    }
+  }
+
+  Future<void> firebaseResetPassword(final String email) async {
+    try {
+      await _firebaseAuth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
       print(e);
     }
   }
@@ -36,7 +44,7 @@ class FirebaseAuthentication {
   Future<void> firebaseSignOut() async {
     try {
       await _firebaseAuth.signOut();
-    } catch (e) {
+    } on FirebaseAuthException catch (e) {
       print(e);
     }
   }
