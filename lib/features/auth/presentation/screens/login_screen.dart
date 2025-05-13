@@ -7,6 +7,7 @@ import 'package:devus/features/auth/presentation/widgets/auth_container_widget.d
 import 'package:devus/features/auth/presentation/widgets/login_form_widget.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -26,7 +27,7 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              flex: 1,
+              flex: 6,
               child: ColumnCustom(
                 customColumnChildrens: [
                   TextWidgetCustom(
@@ -41,7 +42,7 @@ class LoginScreen extends StatelessWidget {
             ),
 
             Expanded(
-              flex: 0,
+              flex: 4,
               child: AuthContainerCustom(
                 containerChild: Padding(
                   padding: EdgeInsets.all(ScreenSize.kPaddingLarge),
@@ -69,6 +70,7 @@ class LoginScreen extends StatelessWidget {
                 email: _emailController.text,
                 password: _passwordController.text,
               );
+              context.go('/chat');
             }
           },
         ),

@@ -25,7 +25,7 @@ class SignUpScreen extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              flex: 2,
+              flex: 6,
               child: ColumnCustom(
                 customColumnChildrens: [
                   TextWidgetCustom(
@@ -40,7 +40,7 @@ class SignUpScreen extends StatelessWidget {
             ),
 
             Expanded(
-              flex: 0,
+              flex: 4,
               child: AuthContainerCustom(
                 containerChild: Padding(
                   padding: EdgeInsets.all(ScreenSize.kPaddingLarge),
