@@ -11,6 +11,7 @@ class TextFieldCustom extends HookWidget {
     this.validator,
     this.isPassword = false,
     this.controller,
+    this.textFieldColor,
   });
 
   final String? hintText;
@@ -18,7 +19,7 @@ class TextFieldCustom extends HookWidget {
   final ValidatorFunction? validator;
   final bool isPassword;
   final TextEditingController? controller;
-
+  final Color? textFieldColor;
   @override
   Widget build(BuildContext context) {
     final isObscured = useState(isPassword);
@@ -28,8 +29,11 @@ class TextFieldCustom extends HookWidget {
       keyboardType: keyboardType,
       obscureText: isObscured.value,
       validator: validator,
+
       decoration: InputDecoration(
         hintText: hintText,
+        filled: true,
+        fillColor: textFieldColor,
         suffixIcon:
             isPassword
                 ? IconButton(

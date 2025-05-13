@@ -7,6 +7,7 @@ import 'package:devus/features/auth/presentation/widgets/auth_container_widget.d
 import 'package:devus/features/auth/presentation/widgets/forgot_password_form.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({super.key});
@@ -20,7 +21,13 @@ class ForgotPasswordScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 240, 240, 240),
-
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 240, 240, 240),
+        leading: IconButton(
+          onPressed: () => context.go('/'),
+          icon: Icon(Icons.arrow_back_ios_outlined),
+        ),
+      ),
       body: SafeArea(
         child: Column(
           children: [
