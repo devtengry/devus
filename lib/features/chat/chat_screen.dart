@@ -8,7 +8,6 @@ import 'package:flutter_gemini/flutter_gemini.dart'; // Gemini API ile iletişim
 import 'package:go_router/go_router.dart'; // Sayfalar arası yönlendirme için
 import 'package:image_picker/image_picker.dart'; // Galeriden veya kameradan resim seçmek için
 
-// Sohbet ekranını temsil eden StatefulWidget
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
 
