@@ -178,3 +178,5 @@ class _ChatScreenState extends State<ChatScreen> {
     }
   }
 }
+
+class ClassName {}
