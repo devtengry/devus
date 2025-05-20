@@ -22,7 +22,7 @@ class _ChatScreenState extends State<ChatScreen> {
   ChatUser currentUser = ChatUser(
     id: "0",
     firstName: 'User 1',
-  ); // Sohbeti kullanan geçerli kullanıc
+  ); // Sohbeti kullanan geçerli kullanıcı.
   ChatUser geminiUser = ChatUser(
     id: "1",
     firstName: "Gemini",
