@@ -26,7 +26,7 @@ class _ChatScreenState extends State<ChatScreen> {
   ChatUser geminiUser = ChatUser(
     id: "1",
     firstName: "Gemini",
-  ); // Gemini botunu temsil eden kullanıcı
+  ); // Gemini botunu temsil eden kullanıcı.
 
   @override
   Widget build(BuildContext context) {
