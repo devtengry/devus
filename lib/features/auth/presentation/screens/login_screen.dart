@@ -70,7 +70,9 @@ class LoginScreen extends StatelessWidget {
                 email: _emailController.text,
                 password: _passwordController.text,
               );
-              context.go('/chat');
+              if (context.mounted) {
+                context.go('/chat');
+              }
             }
           },
         ),
