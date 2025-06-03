@@ -26,3 +26,5 @@ void main() async {
     ),
   );
 }
+
+class Main {}
